@@ -4,8 +4,7 @@ from django.http import HttpRequest, HttpResponse
 
 # Create your views here.
 def landing(request: HttpRequest) -> HttpResponse:
-    html = """
-    <h1>WST</h1>
-    <p>Welcome to WST: Weber State Univ. Trade</p>
-    """
-    return HttpResponse(html)
+    return render(request, 'landing/home.html')
+
+def about(request: HttpRequest) -> HttpResponse:
+    return render(request, 'landing/about.html')
